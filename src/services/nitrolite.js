@@ -28,7 +28,7 @@ export const initializeNitrolite = async (provider, signer) => {
         custody: CUSTODY_ADDRESS,
         adjudicator: ADJUDICATOR_ADDRESS,
         guestAddress: '0x53A50d231569437f969EF1c1Aa034230FD032241', // Will be set dynamically
-        tokenAddress: '0x0000000000000000000000000000000000000000' // ETH = zero address
+        tokenAddress: '0x0000000000000000000000000000000000000000' // ETH = zero address [ using Sepolia ETH testnet tokens ]
       },
       chainId: 11155111, // Sepolia testnet
       challengeDuration: 100n // Challenge duration in blocks
