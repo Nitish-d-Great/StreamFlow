@@ -69,6 +69,13 @@ function LandingPage() {
             {isConnecting ? 'Connecting...' : 'Connect MetaMask Wallet'}
           </button>
           
+          <button 
+            className="chatbot-button" 
+            onClick={() => navigate('/chatbot')}
+          >
+            Try Movie Chatbot
+          </button>
+          
           {typeof window.ethereum === 'undefined' && (
             <p className="warning">
               MetaMask is not installed. Please install it to continue.
