@@ -1,0 +1,303 @@
+.confirmation-page {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #2d1b4e 100%);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  position: relative;
+}
+
+.confirmation-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(81, 207, 102, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%);
+  animation: float 8s ease-in-out infinite;
+}
+
+.confirmation-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 60px 50px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.success-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #51cf66 0%, #40c057 100%);
+  color: white;
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  font-weight: bold;
+  box-shadow: 0 0 40px rgba(81, 207, 102, 0.5);
+  animation: float 3s ease-in-out infinite;
+}
+
+.confirmation-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 50px;
+  font-weight: 800;
+  text-shadow: 0 0 20px rgba(81, 207, 102, 0.5);
+}
+
+.confirmation-info {
+  text-align: left;
+}
+
+.info-card {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(102, 126, 234, 0.5);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.card-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+}
+
+.card-value.amount {
+  color: #ffd700;
+  font-size: 2.2rem;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.transaction-section {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.transaction-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.transaction-hash {
+  word-break: break-all;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hash-link {
+  color: #667eea;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.hash-link:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+  text-decoration: underline;
+}
+
+.off-chain-hash {
+  color: #51cf66;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.address-section {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.address-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.address-row:first-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 18px;
+  margin-bottom: 12px;
+}
+
+.address-label {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  min-width: 50px;
+}
+
+.address-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.address-value {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+}
+
+.full-address {
+  word-break: break-all;
+  text-align: right;
+  max-width: 300px;
+}
+
+.copy-button {
+  background: rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(102, 126, 234, 0.5);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  min-width: 40px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-button:hover {
+  background: rgba(102, 126, 234, 0.4);
+  border-color: rgba(102, 126, 234, 0.8);
+  transform: scale(1.05);
+}
+
+.home-button {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 22px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 15px;
+  margin-top: 40px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.home-button:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+}
+
+.home-button:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .confirmation-container {
+    padding: 40px 25px;
+  }
+  
+  .confirmation-title {
+    font-size: 2rem;
+  }
+  
+  .success-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+  }
+  
+  .card-value {
+    font-size: 1.5rem;
+  }
+  
+  .card-value.amount {
+    font-size: 1.8rem;
+  }
+  
+  .address-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .address-container {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .full-address {
+    max-width: 100%;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  .copy-button {
+    align-self: flex-end;
+  }
+}
